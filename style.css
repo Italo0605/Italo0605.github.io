@@ -1,0 +1,291 @@
+/* IMPORTAR FONTES */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Varela Round', sans-serif;
+}
+/* CLASSES */
+.redeSocial{
+    width: 30px;
+    margin: 5px 10px;
+}
+#landing .android{
+    display: none;
+}
+#nav_responsivo{
+    display: none;
+}
+
+/* CABEÇALHO */
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: crimson;
+    position: fixed;
+    font-family: 'Varela Round', sans-serif;
+    border-bottom: solid 1px;
+    font-size: 17px;
+}
+ul{
+    list-style: none;
+}
+header p{
+    margin-left:38px;
+    font-weight: 600;
+}
+#nav_links li{
+    display: inline;
+    margin-right:38px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+
+
+/* Landing */
+#landing{
+    display: flex;
+    min-height:100vh ;
+}
+#landing div{
+    display: flex;
+}
+.um{
+    background-image: url("Imagens/code-1076536_1920.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 70%;
+}
+.um h1{
+    align-self: flex-end;
+    color: white;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 57px;
+    margin: 70px 40px;
+}
+.um .ultimaLinha{
+    font-size: 28px;
+}
+.dois{
+    background-color: white;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    min-width: 30%;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 16px;
+}
+#imagem{
+    background:url("Imagens/MinhaImagem.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 200px;
+    border-radius: 140px;
+}
+#bordaImagem{
+    border: black solid 5px;
+    border-radius: 140px;
+    padding: 20px;
+}
+.dois p{
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+/* SOBRE MIM */
+#sobreMim{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 510px;
+}
+#sobreMim h1{
+    margin-top: 50px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    font-family: 'Source Code Pro', monospace;
+}
+#sobreMim p{
+    font-style: normal;
+    margin: 60px;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 44px;
+    text-align: justify;
+}
+
+/* FORMAÇÕES E CONQUISTAS */
+#formacaoConquistas{
+    display: flex;
+    justify-content: space-evenly;
+}
+#formacoes,#conquistas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 60px;
+}
+#formacoes h1, #conquistas h1{
+    font-family: 'Source Code Pro', monospace;
+}
+
+/* PORTIFOLIOS */
+#portifolio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#portifolio h1{
+    margin-top: 50px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    font-family: 'Source Code Pro', monospace;
+}  
+
+#projetos{
+    display: grid;
+    width: 45vw;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 17rem;
+    gap: 30px;
+    grid-auto-flow: 17rem;
+}
+#projetos img{
+    width: 65px;
+    height: 65px;
+    border-radius: 20vh;
+}
+#projetos .content{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1vh;
+    max-width: 500px;
+    min-width: 250px;
+}
+#contatos h1{
+    grid-area: "title";
+}
+#contatos .redeSocial{
+    grid-area: "redesocial";
+}
+#contatos p{
+    grid-area: "text";
+}
+
+#contatos{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-flow: row;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Source Code Pro', monospace;
+    background-color: rgb(196, 49, 93);
+}
+
+#contatos div{
+    display: grid;
+    align-items: center;
+    justify-content: center; 
+}
+#contatos div:first-child{
+   margin-bottom: 105px;
+}
+
+
+
+
+
+/* RESPONSIVIDADE */
+@media(max-width:970px){
+    #formacaoConquistas p, #sobreMim p{
+        font-size: 20px;
+    }
+    #landing{
+        justify-content: center;
+    }
+    #landing .um{
+        display: none;
+    }
+    #landing .dois{
+        background: none;
+    }
+    #landing .android{
+        display: block;
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: small;
+        margin-top: 40px;
+    }
+    #nav_links{
+        display: none;
+    }
+    /*Nav bar responsivo */
+    #nav_responsivo{
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    }
+    #nav_responsivo:hover #nav_links{
+        display: flex;
+        flex-direction: column;
+    }
+    #nav_responsivo img{
+        cursor: pointer;
+    }
+   
+}
+
+@media(max-width: 860px){
+    #projetos {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 17rem;
+    }
+    @media(max-width:730px){
+
+        #formacaoConquistas{
+            flex-direction: column;
+        }
+        #contatos{
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr;
+        }
+    }
+    @media(max-width:500px){
+        #sobreMim p{
+            font-size: 25px;
+        }
+    }
+}
